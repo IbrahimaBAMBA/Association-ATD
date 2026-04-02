@@ -1,0 +1,801 @@
+﻿<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alliance Tounga-Djè - Éducation, Culture et Développement Communautaire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <div class="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-3">
+                    ATD
+                </div>
+                <span class="text-2xl font-bold text-amber-800 hidden md:block">Alliance Tounga-Djè</span>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-amber-900 hover:text-amber-600 font-medium">Accueil</a>
+                <a href="#about" class="text-amber-900 hover:text-amber-600 font-medium">À propos</a>
+                <a href="#projects" class="text-amber-900 hover:text-amber-600 font-medium">Projets</a>
+                <a href="#media" class="text-amber-900 hover:text-amber-600 font-medium">Multimédia</a>
+                <a href="#sponsor" class="text-amber-900 hover:text-amber-600 font-medium">Parrain</a>
+                <a href="#team" class="text-amber-900 hover:text-amber-600 font-medium">Équipe</a>
+                <a href="#radio" class="text-amber-900 hover:text-amber-600 font-medium">Radio FM</a>
+                <a href="#contact" class="text-amber-900 hover:text-amber-600 font-medium">Contact</a>
+            </nav>
+
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden text-amber-900">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+
+            <!-- CTA and Language -->
+            <div class="hidden md:flex items-center space-x-4">
+                <div class="language-selector relative">
+                    <button class="flex items-center text-amber-900">
+                        <span class="mr-1">FR</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="language-dropdown absolute right-0 mt-2 w-16 bg-white shadow-md rounded-md hidden">
+                        <a href="#" class="block px-4 py-2 text-amber-900 hover:bg-amber-50">EN</a>
+                    </div>
+                </div>
+                <a href="#donate" class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-md font-medium transition duration-300">
+                    Faire un don
+                </a>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                <a href="#home" class="text-amber-900 hover:text-amber-600 font-medium py-2 border-b">Accueil</a>
+                <a href="#about" class="text-amber-900 hover:text-amber-600 font-medium py-2 border-b">À propos</a>
+                <a href="#projects" class="text-amber-900 hover:text-amber-600 font-medium py-2 border-b">Projets</a>
+                <a href="#media" class="text-amber-900 hover:text-amber-600 font-medium py-2 border-b">Multimédia</a>
+                <a href="#sponsor" class="text-amber-900 hover:text-amber-600 font-medium py-2 border-b">Parrain</a>
+                <a href="#team" class="text-amber-900 hover:text-amber-600 font-medium py-2 border-b">Équipe</a>
+                <a href="#radio" class="text-amber-900 hover:text-amber-600 font-medium py-2 border-b">Radio FM</a>
+                <a href="#contact" class="text-amber-900 hover:text-amber-600 font-medium py-2 border-b">Contact</a>
+                <div class="flex items-center justify-between pt-2">
+                    <div class="language-selector relative">
+                        <button class="flex items-center text-amber-900">
+                            <span class="mr-1">FR</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="language-dropdown absolute right-0 mt-2 w-16 bg-white shadow-md rounded-md hidden">
+                            <a href="#" class="block px-4 py-2 text-amber-900 hover:bg-amber-50">EN</a>
+                        </div>
+                    </div>
+                    <a href="#donate" class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-md font-medium transition duration-300">
+                        Faire un don
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Carousel -->
+    <section id="home" class="relative overflow-hidden">
+        <div class="hero-slide relative h-96 md:h-screen max-h-screen w-full bg-cover bg-center flex items-center" style="background-image: url('img/hero-bg.jpg')">
+            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+            <div class="container mx-auto px-4 relative z-10 text-white">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Éduquer, Inspirer, Transformer</h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-2xl">Soutenez nos projets pour un avenir meilleur dans les communautés de Tounga-Djè</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#donate" class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-md font-medium text-lg transition duration-300">
+                        Faire un don
+                    </a>
+                    <a href="#projects" class="bg-white hover:bg-gray-100 text-amber-800 px-6 py-3 rounded-md font-medium text-lg transition duration-300">
+                        Nos projets
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Indicators -->
+        <div class="absolute bottom-8 left-0 right-0 flex justify-center space-x-2 z-10">
+            <button class="w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 focus:outline-none"></button>
+            <button class="w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 focus:outline-none"></button>
+            <button class="w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 focus:outline-none"></button>
+        </div>
+    </section>
+
+    <!-- Our Mission Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">Notre Mission</h2>
+                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            <div class="max-w-4xl mx-auto text-center text-gray-700 text-lg">
+                <p>L'Alliance Tounga-Djè œuvre pour le développement durable des communautés à travers l'éducation, la promotion culturelle et l'autonomisation économique. Notre mission est de créer des opportunités équitables pour tous, en particulier les enfants et les jeunes, par des programmes éducatifs innovants, la préservation du patrimoine culturel et des initiatives de développement communautaire. Nous croyons en un avenir où chaque individu a les moyens de réaliser son plein potentiel tout en restant ancré dans ses valeurs culturelles.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent News Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">Actualités Récentes</h2>
+                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- News Item 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('img/news-ecole.jpg')"></div>
+                    <div class="p-6">
+                        <span class="text-sm text-amber-600">15 Juin 2023</span>
+                        <h3 class="text-xl font-bold text-gray-800 mt-2 mb-3">Inauguration de la nouvelle école</h3>
+                        <p class="text-gray-600 mb-4">Nous avons inauguré notre nouvelle école primaire dans le village de Tounga, capable d'accueillir 200 élèves avec des installations modernes.</p>
+                        <a href="#" class="text-amber-600 font-medium hover:text-amber-700 flex items-center">
+                            Lire plus <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- News Item 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('img/news-festival.jpg')"></div>
+                    <div class="p-6">
+                        <span class="text-sm text-amber-600">2 Juin 2023</span>
+                        <h3 class="text-xl font-bold text-gray-800 mt-2 mb-3">Festival Culturel Annuel</h3>
+                        <p class="text-gray-600 mb-4">Notre festival culturel annuel a rassemblé plus de 5000 personnes pour célébrer les traditions locales avec des danses, musiques et arts traditionnels.</p>
+                        <a href="#" class="text-amber-600 font-medium hover:text-amber-700 flex items-center">
+                            Lire plus <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- News Item 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('img/news-agriculture.jpg')"></div>
+                    <div class="p-6">
+                        <span class="text-sm text-amber-600">20 Mai 2023</span>
+                        <h3 class="text-xl font-bold text-gray-800 mt-2 mb-3">Programme de Formation Agricole</h3>
+                        <p class="text-gray-600 mb-4">Lancement d'un nouveau programme de formation en techniques agricoles modernes pour 50 agriculteurs locaux afin d'améliorer leurs rendements.</p>
+                        <a href="#" class="text-amber-600 font-medium hover:text-amber-700 flex items-center">
+                            Lire plus <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="#" class="inline-block bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-md font-medium transition duration-300">
+                    Voir toutes les actualités
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Us Section -->
+    <section class="py-16 bg-amber-800 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Rejoignez notre cause</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Ensemble, nous pouvons faire la différence dans la vie de milliers de personnes.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#volunteer" class="bg-white hover:bg-gray-100 text-amber-800 px-6 py-3 rounded-md font-medium text-lg transition duration-300">
+                    Devenir bénévole
+                </a>
+                <a href="#donate" class="bg-transparent hover:bg-amber-700 border-2 border-white text-white px-6 py-3 rounded-md font-medium text-lg transition duration-300">
+                    Faire un don
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">À propos de nous</h2>
+                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row items-center mb-16">
+                <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-8">
+                    <h3 class="text-2xl font-bold text-amber-800 mb-4">Notre Histoire</h3>
+                    <p class="text-gray-700 mb-4">Fondée en 2010 par un groupe de leaders communautaires préoccupés par le déclin des infrastructures éducatives et la perte des traditions culturelles, l'Alliance Tounga-Djè a commencé comme une petite initiative locale. Aujourd'hui, nous sommes une organisation reconnue qui impacte positivement des milliers de vies chaque année.</p>
+                    <p class="text-gray-700">Notre nom "Tounga-Djè" vient des deux villages voisins où nous avons commencé nos activités, symbolisant notre engagement à unir les communautés pour un développement harmonieux.</p>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-200 h-80 rounded-lg overflow-hidden">
+                        <!-- Placeholder for about image -->
+                        <div class="w-full h-full bg-cover bg-center" style="background-image: url('img/about-history.jpg')"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Our Values -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-amber-800 mb-8 text-center">Nos Valeurs</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Value 1 -->
+                    <div class="value-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:border-amber-200 transition duration-300">
+                        <div class="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 mb-4">
+                            <i class="fas fa-book-open text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Éducation</h4>
+                        <p class="text-gray-600">Nous croyons que l'éducation est le fondement du développement personnel et communautaire.</p>
+                    </div>
+                    
+                    <!-- Value 2 -->
+                    <div class="value-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:border-amber-200 transition duration-300">
+                        <div class="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 mb-4">
+                            <i class="fas fa-hands-helping text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Solidarité</h4>
+                        <p class="text-gray-600">Nous travaillons ensemble pour le bien commun, en soutenant les plus vulnérables.</p>
+                    </div>
+                    
+                    <!-- Value 3 -->
+                    <div class="value-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:border-amber-200 transition duration-300">
+                        <div class="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 mb-4">
+                            <i class="fas fa-music text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Culture</h4>
+                        <p class="text-gray-600">Nous préservons et célébrons notre riche patrimoine culturel pour les générations futures.</p>
+                    </div>
+                    
+                    <!-- Value 4 -->
+                    <div class="value-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:border-amber-200 transition duration-300">
+                        <div class="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 mb-4">
+                            <i class="fas fa-leaf text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Durabilité</h4>
+                        <p class="text-gray-600">Nos solutions sont conçues pour avoir un impact durable sur les communautés.</p>
+                    </div>
+                    
+                    <!-- Value 5 -->
+                    <div class="value-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:border-amber-200 transition duration-300">
+                        <div class="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 mb-4">
+                            <i class="fas fa-balance-scale text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Équité</h4>
+                        <p class="text-gray-600">Nous nous engageons à créer des opportunités équitables pour tous, sans discrimination.</p>
+                    </div>
+                    
+                    <!-- Value 6 -->
+                    <div class="value-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:border-amber-200 transition duration-300">
+                        <div class="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 mb-4">
+                            <i class="fas fa-hand-holding-heart text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Empathie</h4>
+                        <p class="text-gray-600">Nous écoutons et répondons aux besoins réels des communautés avec compassion.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Our Impact -->
+            <div class="bg-amber-50 rounded-lg p-8">
+                <h3 class="text-2xl font-bold text-amber-800 mb-6 text-center">Notre Impact</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <div class="text-5xl font-bold text-amber-600 mb-2">500+</div>
+                        <div class="text-gray-700 font-medium">Enfants scolarisés</div>
+                    </div>
+                    <div>
+                        <div class="text-5xl font-bold text-amber-600 mb-2">15</div>
+                        <div class="text-gray-700 font-medium">Projets réalisés</div>
+                    </div>
+                    <div>
+                        <div class="text-5xl font-bold text-amber-600 mb-2">10,000+</div>
+                        <div class="text-gray-700 font-medium">Personnes impactées</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">Nos Projets</h2>
+                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <!-- Project Filters -->
+            <div class="flex justify-center mb-8">
+                <div class="inline-flex rounded-md shadow-sm" role="group">
+                    <button type="button" class="px-4 py-2 text-sm font-medium rounded-l-lg border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-amber-500 focus:text-amber-700">
+                        Tous
+                    </button>
+                    <button type="button" class="px-4 py-2 text-sm font-medium border-t border-b border-gray-200 bg-white text-gray-700 hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-amber-500 focus:text-amber-700">
+                        Éducation
+                    </button>
+                    <button type="button" class="px-4 py-2 text-sm font-medium border-t border-b border-gray-200 bg-white text-gray-700 hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-amber-500 focus:text-amber-700">
+                        Culture
+                    </button>
+                    <button type="button" class="px-4 py-2 text-sm font-medium rounded-r-md border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-amber-500 focus:text-amber-700">
+                        Développement
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('img/project-education.jpg')"></div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold text-amber-800 bg-amber-100 rounded-full mb-2">Éducation</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">École Primaire Moderne</h3>
+                        <p class="text-gray-600 mb-4">Construction et équipement d'une école primaire moderne avec 6 salles de classe, une bibliothèque et un terrain de sport.</p>
+                        <a href="#" class="inline-flex items-center text-amber-600 font-medium hover:text-amber-700">
+                            En savoir plus <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('img/project-culture.jpg')"></div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full mb-2">Culture</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Centre Culturel</h3>
+                        <p class="text-gray-600 mb-4">Création d'un centre culturel pour préserver et promouvoir les arts traditionnels, avec des ateliers et des spectacles réguliers.</p>
+                        <a href="#" class="inline-flex items-center text-amber-600 font-medium hover:text-amber-700">
+                            En savoir plus <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('img/project-development.jpg')"></div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold text-blue-800 bg-blue-100 rounded-full mb-2">Développement</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Puits Communautaires</h3>
+                        <p class="text-gray-600 mb-4">Forage et installation de 5 puits d'eau potable dans les villages les plus reculés de la région.</p>
+                        <a href="#" class="inline-flex items-center text-amber-600 font-medium hover:text-amber-700">
+                            En savoir plus <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('img/project-bourses.jpg')"></div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold text-amber-800 bg-amber-100 rounded-full mb-2">Éducation</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Bourses d'Études</h3>
+                        <p class="text-gray-600 mb-4">Programme de bourses pour 50 élèves méritants issus de familles défavorisées pour poursuivre leurs études secondaires.</p>
+                        <a href="#" class="inline-flex items-center text-amber-600 font-medium hover:text-amber-700">
+                            En savoir plus <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('img/project-festival.jpg')"></div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full mb-2">Culture</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Festival Annuel</h3>
+                        <p class="text-gray-600 mb-4">Organisation du festival culturel annuel mettant en valeur les danses, musiques et arts traditionnels de la région.</p>
+                        <a href="#" class="inline-flex items-center text-amber-600 font-medium hover:text-amber-700">
+                            En savoir plus <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('img/project-development.jpg')"></div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold text-blue-800 bg-blue-100 rounded-full mb-2">Développement</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Formation Agricole</h3>
+                        <p class="text-gray-600 mb-4">Programme de formation en techniques agricoles modernes pour améliorer les rendements des petits agriculteurs.</p>
+                        <a href="#" class="inline-flex items-center text-amber-600 font-medium hover:text-amber-700">
+                            En savoir plus <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="#" class="inline-block bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-md font-medium transition duration-300">
+                    Voir tous nos projets
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Gallery Section -->
+    <section id="media" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">Multimédia</h2>
+                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <!-- Media Filters -->
+            <div class="flex justify-center mb-8">
+                <div class="inline-flex rounded-md shadow-sm" role="group">
+                    <button type="button" class="px-4 py-2 text-sm font-medium rounded-l-lg border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-amber-500 focus:text-amber-700">
+                        Tous
+                    </button>
+                    <button type="button" class="px-4 py-2 text-sm font-medium border-t border-b border-gray-200 bg-white text-gray-700 hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-amber-500 focus:text-amber-700">
+                        Photos
+                    </button>
+                    <button type="button" class="px-4 py-2 text-sm font-medium rounded-r-md border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-amber-500 focus:text-amber-700">
+                        Vidéos
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Image 1 -->
+                <div class="gallery-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('img/news-ecole.jpg')"></div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-gray-500">15 Juin 2023</span>
+                            <span class="text-xs px-2 py-1 bg-amber-100 text-amber-800 rounded-full">Éducation</span>
+                        </div>
+                        <h4 class="text-sm font-medium text-gray-800 mt-2">Inauguration de l'école primaire</h4>
+                    </div>
+                </div>
+                
+                <!-- Video 1 -->
+                <div class="gallery-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-gray-800 flex items-center justify-center relative">
+                        <div class="absolute inset-0 bg-cover bg-center opacity-50" style="background-image: url('img/news-festival.jpg')"></div>
+                        <div class="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center text-white z-10">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-gray-500">2 Juin 2023</span>
+                            <span class="text-xs px-2 py-1 bg-green-100 text-green-800 rounded-full">Culture</span>
+                        </div>
+                        <h4 class="text-sm font-medium text-gray-800 mt-2">Festival culturel 2023</h4>
+                    </div>
+                </div>
+                
+                <!-- Image 2 -->
+                <div class="gallery-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('img/project-education.jpg')"></div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-gray-500">20 Mai 2023</span>
+                            <span class="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded-full">Développement</span>
+                        </div>
+                        <h4 class="text-sm font-medium text-gray-800 mt-2">Formation agricole</h4>
+                    </div>
+                </div>
+                
+                <!-- Image 3 -->
+                <div class="gallery-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('img/project-bourses.jpg')"></div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-gray-500">15 Avril 2023</span>
+                            <span class="text-xs px-2 py-1 bg-amber-100 text-amber-800 rounded-full">Éducation</span>
+                        </div>
+                        <h4 class="text-sm font-medium text-gray-800 mt-2">Distribution de fournitures scolaires</h4>
+                    </div>
+                </div>
+                
+                <!-- Video 2 -->
+                <div class="gallery-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-gray-800 flex items-center justify-center relative">
+                        <div class="absolute inset-0 bg-cover bg-center opacity-50" style="background-image: url('img/project-culture.jpg')"></div>
+                        <div class="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center text-white z-10">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-gray-500">10 Mars 2023</span>
+                            <span class="text-xs px-2 py-1 bg-green-100 text-green-800 rounded-full">Culture</span>
+                        </div>
+                        <h4 class="text-sm font-medium text-gray-800 mt-2">Spectacle de danse traditionnelle</h4>
+                    </div>
+                </div>
+                
+                <!-- Image 4 -->
+                <div class="gallery-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('img/project-festival.jpg')"></div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-gray-500">5 Mars 2023</span>
+                            <span class="text-xs px-2 py-1 bg-green-100 text-green-800 rounded-full">Culture</span>
+                        </div>
+                        <h4 class="text-sm font-medium text-gray-800 mt-2">Atelier d'artisanat</h4>
+                    </div>
+                </div>
+                
+                <!-- Image 5 -->
+                <div class="gallery-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('img/about-history.jpg')"></div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-gray-500">28 Février 2023</span>
+                            <span class="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded-full">Développement</span>
+                        </div>
+                        <h4 class="text-sm font-medium text-gray-800 mt-2">Construction de puits</h4>
+                    </div>
+                </div>
+                
+                <!-- Video 3 -->
+                <div class="gallery-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-gray-800 flex items-center justify-center relative">
+                        <div class="absolute inset-0 bg-cover bg-center opacity-50" style="background-image: url('img/news-agriculture.jpg')"></div>
+                        <div class="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center text-white z-10">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-gray-500">15 Février 2023</span>
+                            <span class="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded-full">Développement</span>
+                        </div>
+                        <h4 class="text-sm font-medium text-gray-800 mt-2">Projet agricole communautaire</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <button class="inline-block bg-white hover:bg-gray-100 border border-amber-600 text-amber-600 px-6 py-3 rounded-md font-medium transition duration-300">
+                    Charger plus
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsor Section -->
+    <section id="sponsor" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">Notre Parrain d'Honneur</h2>
+                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg max-w-4xl mx-auto">
+                <div class="h-64 bg-cover bg-center" style="background-image: url('img/sponsor.jpg')"></div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-amber-800 mb-4">Dr. Amadou Diallo</h3>
+                    <blockquote class="border-l-4 border-amber-500 pl-4 mb-6 italic text-gray-700">
+                        "Investir dans l'éducation et la culture des jeunes générations, c'est construire les fondations d'une société plus juste et plus prospère."
+                    </blockquote>
+                    <div class="text-gray-700 space-y-4">
+                        <p>Dr. Amadou Diallo, éminent universitaire et philanthrope, est notre parrain d'honneur depuis la création de l'Alliance Tounga-Djè en 2010. Né dans la région, il a gravi les échelons académiques pour devenir professeur d'économie à l'Université de Paris avant de retourner dans son pays natal pour contribuer à son développement.</p>
+                        <p>Son engagement en faveur de l'éducation et du développement communautaire a permis à notre organisation de bénéficier de son réseau et de son expertise. Grâce à son soutien, nous avons pu lancer plusieurs projets majeurs, dont la construction de l'école primaire moderne et la création du centre culturel.</p>
+                        <p>En plus de son rôle de parrain, Dr. Diallo participe activement à nos programmes de mentorat pour les jeunes étudiants et intervient régulièrement lors de nos événements majeurs. Son leadership visionnaire et son dévouement continuent d'inspirer toute notre équipe et les communautés que nous servons.</p>
+                    </div>
+                    <div class="mt-8">
+                        <a href="#contact" class="inline-block bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-md font-medium transition duration-300">
+                            Contactez-nous
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">Notre Équipe Dirigeante</h2>
+                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="team-member bg-white rounded-lg overflow-hidden shadow-md text-center">
+                    <div class="h-64 w-64 mx-auto mt-6 rounded-full overflow-hidden border-4 border-amber-100">
+                        <img src="img/team-president.jpg" alt="Président" class="w-full h-full object-cover transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Mamadou Keita</h3>
+                        <p class="text-amber-600 font-medium mb-3">Président</p>
+                        <p class="text-gray-600 text-sm">Fondateur de l'Alliance Tounga-Djè avec 15 ans d'expérience dans le développement communautaire.</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="team-member bg-white rounded-lg overflow-hidden shadow-md text-center">
+                    <div class="h-64 w-64 mx-auto mt-6 rounded-full overflow-hidden border-4 border-amber-100">
+                        <img src="img/team-vicepresident.jpg" alt="Vice-Présidente" class="w-full h-full object-cover transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Aminata Bamba</h3>
+                        <p class="text-amber-600 font-medium mb-3">Vice-Présidente</p>
+                        <p class="text-gray-600 text-sm">Spécialiste en éducation avec un focus sur l'accès à l'éducation pour les filles en milieu rural.</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="team-member bg-white rounded-lg overflow-hidden shadow-md text-center">
+                    <div class="h-64 w-64 mx-auto mt-6 rounded-full overflow-hidden border-4 border-amber-100">
+                        <img src="img/sponsor.jpg" alt="Trésorier" class="w-full h-full object-cover transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Sékou Traoré</h3>
+                        <p class="text-amber-600 font-medium mb-3">Trésorier</p>
+                        <p class="text-gray-600 text-sm">Expert-comptable avec une passion pour la transparence financière dans les ONG.</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 4 -->
+                <div class="team-member bg-white rounded-lg overflow-hidden shadow-md text-center">
+                    <div class="h-64 w-64 mx-auto mt-6 rounded-full overflow-hidden border-4 border-amber-100">
+                        <img src="img/team-secretaire.jpg" alt="Secrétaire Générale" class="w-full h-full object-cover transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Fatoumata Diarra</h3>
+                        <p class="text-amber-600 font-medium mb-3">Secrétaire Générale</p>
+                        <p class="text-gray-600 text-sm">Organisatrice communautaire avec une expertise en mobilisation des ressources locales.</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 5 -->
+                <div class="team-member bg-white rounded-lg overflow-hidden shadow-md text-center">
+                    <div class="h-64 w-64 mx-auto mt-6 rounded-full overflow-hidden border-4 border-amber-100">
+                        <img src="img/team-directeur.jpg" alt="Directeur des Projets" class="w-full h-full object-cover transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Boubacar Coulibaly</h3>
+                        <p class="text-amber-600 font-medium mb-3">Directeur des Projets</p>
+                        <p class="text-gray-600 text-sm">Ingénieur civil spécialisé dans les infrastructures éducatives et sanitaires.</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 6 -->
+                <div class="team-member bg-white rounded-lg overflow-hidden shadow-md text-center">
+                    <div class="h-64 w-64 mx-auto mt-6 rounded-full overflow-hidden border-4 border-amber-100">
+                        <img src="img/team-culture.jpg" alt="Responsable Culture" class="w-full h-full object-cover transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Aïssata Koné</h3>
+                        <p class="text-amber-600 font-medium mb-3">Responsable Culture</p>
+                        <p class="text-gray-600 text-sm">Artiste et conservatrice culturelle dédiée à la préservation des traditions locales.</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 7 -->
+                <div class="team-member bg-white rounded-lg overflow-hidden shadow-md text-center">
+                    <div class="h-64 w-64 mx-auto mt-6 rounded-full overflow-hidden border-4 border-amber-100">
+                        <img src="img/team-communication.jpg" alt="Responsable Communication" class="w-full h-full object-cover transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Kadiatou Sangaré</h3>
+                        <p class="text-amber-600 font-medium mb-3">Responsable Communication</p>
+                        <p class="text-gray-600 text-sm">Journaliste et spécialiste des médias communautaires avec une expertise en storytelling.</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 8 -->
+                <div class="team-member bg-white rounded-lg overflow-hidden shadow-md text-center">
+                    <div class="h-64 w-64 mx-auto mt-6 rounded-full overflow-hidden border-4 border-amber-100">
+                        <img src="img/team-benevolat.jpg" alt="Responsable Bénévolat" class="w-full h-full object-cover transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Moussa Diakité</h3>
+                        <p class="text-amber-600 font-medium mb-3">Responsable Bénévolat</p>
+                        <p class="text-gray-600 text-sm">Coordinateur expérimenté dans la gestion des programmes de bénévolat et de mentorat.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#volunteer" class="inline-block bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-md font-medium transition duration-300">
+                    Rejoignez notre équipe
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Radio Section -->
+    <section id="radio" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">Écoutez Tounga-Djè FM</h2>
+                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <!-- Radio Player -->
+                <div class="radio-player rounded-xl overflow-hidden shadow-lg mb-12">
+                    <div class="p-8 text-white">
+                        <h3 class="text-2xl font-bold mb-4">En direct maintenant</h3>
+                        <div class="flex items-center mb-6">
+                            <button class="w-16 h-16 bg-white text-amber-600 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-play text-2xl"></i>
+                            </button>
+                            <div>
+                                <p class="text-lg font-medium">Émission spéciale</p>
+                                <p class="text-amber-200">"L'éducation pour tous" avec Dr. Diallo</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm">14:00 - 15:30</span>
+                            <span class="text-sm">Écouteurs: 245</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- About Radio -->
+                <div class="bg-white rounded-lg p-8 shadow-md mb-12">
+                    <h3 class="text-2xl font-bold text-amber-800 mb-4">À propos de la radio</h3>
+                    <p class="text-gray-700 mb-4">Tounga-Djè FM est la voix des communautés que nous servons. Lancée en 2015, notre station radio communautaire diffuse 24h/24 avec une programmation variée incluant des éducatives, des débats, de la musique traditionnelle et des informations locales.</p>
+                    <p class="text-gray-700">Notre mission est d'informer, éduquer et divertir tout en préservant notre patrimoine culturel. Avec une portée de 50km autour de Tounga-Djè, nous touchons quotidiennement des milliers d'auditeurs, y compris dans les zones les plus reculées.</p>
+                </div>
+                
+                <!-- Program Schedule -->
+                <div class="bg-white rounded-lg p-8 shadow-md">
+                    <h3 class="text-2xl font-bold text-amber-800 mb-6">Programme Hebdomadaire</h3>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full bg-white">
+                            <thead>
+                                <tr class="bg-amber-50">
+                                    <th class="py-3 px-4 text-left text-amber-800 font-medium">Jour</th>
+                                    <th class="py-3 px-4 text-left text-amber-800 font-medium">Heure</th>
+                                    <th class="py-3 px-4 text-left text-amber-800 font-medium">Émission</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="py-3 px-4">Lundi</td>
+                                    <td class="py-3 px-4">7:00 - 8:00</td>
+                                    <td class="py-3 px-4">Actualités locales</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="py-3 px-4">Mardi</td>
+                                    <td class="py-3 px-4">10:00 - 11:30</td>
+                                    <td class="py-3 px-4">Santé communautaire</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4">Mercredi</td>
+                                    <td class="py-3 px-4">14:00 - 15:30</td>
+                                    <td class="py-3 px-4">Éducation pour tous</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="py-3 px-4">Jeudi</td>
+                                    <td class="py-3 px-4">16:00 - 17:30</td>
+                                    <td class="py-3 px-4">Agriculture moderne</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4">Vendredi</td>
+                                    <td class="py-3 px-4">18:00 - 20:00</td>
+                                    <td class="py-3 px-4">Musique traditionnelle</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="py-3 px-4">Samedi</td>
+                                    <td class="py-3 px-4">9:00 - 12:00</td>
+                                    <td class="py-3 px-4">Jeunesse et avenir</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4">Dimanche</td>
+                                    <td class="py-3 px-4">7:00 - 10:00</td>
+                                    <td class="py-3 px-4">Culture et traditions</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+
+</html>
+
+
