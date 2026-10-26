@@ -1,801 +1,422 @@
-﻿<html lang="fr">
+﻿<!DOCTYPE html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alliance Tounga-Djè - Éducation, Culture et Développement Communautaire</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body class="bg-gray-50">
-    <!-- Header -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <!-- Logo -->
-            <div class="flex items-center">
-                <div class="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-3">
-                    ATD
-                </div>
-                <span class="text-2xl font-bold text-amber-800 hidden md:block">Alliance Tounga-Djè</span>
-            </div>
+    <title>Alliance Tounga-djè | Association d'aide à la ruralité dans le Bafing</title>
+    <meta name="description" content="L'Alliance Tounga-djè relie la diaspora et les habitants du Bafing (Côte d'Ivoire) pour mener des projets utiles à la vie rurale : agriculture, école, eau, santé.">
+    <meta name="theme-color" content="#0b4a26">
 
-            <!-- Navigation -->
-            <nav class="hidden md:flex items-center space-x-8">
-                <a href="#home" class="text-amber-900 hover:text-amber-600 font-medium">Accueil</a>
-                <a href="#about" class="text-amber-900 hover:text-amber-600 font-medium">À propos</a>
-                <a href="#projects" class="text-amber-900 hover:text-amber-600 font-medium">Projets</a>
-                <a href="#media" class="text-amber-900 hover:text-amber-600 font-medium">Multimédia</a>
-                <a href="#sponsor" class="text-amber-900 hover:text-amber-600 font-medium">Parrain</a>
-                <a href="#team" class="text-amber-900 hover:text-amber-600 font-medium">Équipe</a>
-                <a href="#radio" class="text-amber-900 hover:text-amber-600 font-medium">Radio FM</a>
-                <a href="#contact" class="text-amber-900 hover:text-amber-600 font-medium">Contact</a>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Alliance Tounga-djè : faire grandir nos villages, ensemble">
+    <meta property="og:description" content="Association d'aide à la ruralité dans la région du Bafing, en Côte d'Ivoire.">
+    <meta property="og:image" content="img/og-image.jpg">
+    <meta property="og:locale" content="fr_FR">
+
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=3">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NGO",
+        "name": "Alliance Tounga-djè",
+        "description": "Association d'aide à la ruralité dans la région du Bafing, Côte d'Ivoire.",
+        "logo": "img/logo-atd.png",
+        "areaServed": "Région du Bafing, Côte d'Ivoire"
+    }
+    </script>
+</head>
+<body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+    <!-- En-tête -->
+    <header class="site-header" id="haut">
+        <div class="container header-inner">
+            <a href="#accueil" class="brand" aria-label="Alliance Tounga-djè, retour en haut de page">
+                <img src="img/embleme.png" alt="" width="40" height="44">
+                <span class="brand-name">Alliance <span>Tounga-djè</span></span>
+            </a>
+
+            <nav class="main-nav" id="menu" aria-label="Navigation principale">
+                <ul>
+                    <li><a href="#association">L'association</a></li>
+                    <li><a href="#actions">Nos actions</a></li>
+                    <li><a href="#bafing">Le Bafing</a></li>
+                    <li><a href="#agir">Agir avec nous</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <a href="#don" class="btn btn-primary nav-cta">Faire un don</a>
             </nav>
 
-            <!-- Mobile menu button -->
-            <button id="mobile-menu-button" class="md:hidden text-amber-900">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">
+                <span class="sr-only">Ouvrir le menu</span>
+                <span class="menu-bar" aria-hidden="true"></span>
             </button>
-
-            <!-- CTA and Language -->
-            <div class="hidden md:flex items-center space-x-4">
-                <div class="language-selector relative">
-                    <button class="flex items-center text-amber-900">
-                        <span class="mr-1">FR</span>
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div class="language-dropdown absolute right-0 mt-2 w-16 bg-white shadow-md rounded-md hidden">
-                        <a href="#" class="block px-4 py-2 text-amber-900 hover:bg-amber-50">EN</a>
-                    </div>
-                </div>
-                <a href="#donate" class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-md font-medium transition duration-300">
-                    Faire un don
-                </a>
-            </div>
-        </div>
-
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
-            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
-                <a href="#home" class="text-amber-900 hover:text-amber-600 font-medium py-2 border-b">Accueil</a>
-                <a href="#about" class="text-amber-900 hover:text-amber-600 font-medium py-2 border-b">À propos</a>
-                <a href="#projects" class="text-amber-900 hover:text-amber-600 font-medium py-2 border-b">Projets</a>
-                <a href="#media" class="text-amber-900 hover:text-amber-600 font-medium py-2 border-b">Multimédia</a>
-                <a href="#sponsor" class="text-amber-900 hover:text-amber-600 font-medium py-2 border-b">Parrain</a>
-                <a href="#team" class="text-amber-900 hover:text-amber-600 font-medium py-2 border-b">Équipe</a>
-                <a href="#radio" class="text-amber-900 hover:text-amber-600 font-medium py-2 border-b">Radio FM</a>
-                <a href="#contact" class="text-amber-900 hover:text-amber-600 font-medium py-2 border-b">Contact</a>
-                <div class="flex items-center justify-between pt-2">
-                    <div class="language-selector relative">
-                        <button class="flex items-center text-amber-900">
-                            <span class="mr-1">FR</span>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        <div class="language-dropdown absolute right-0 mt-2 w-16 bg-white shadow-md rounded-md hidden">
-                            <a href="#" class="block px-4 py-2 text-amber-900 hover:bg-amber-50">EN</a>
-                        </div>
-                    </div>
-                    <a href="#donate" class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-md font-medium transition duration-300">
-                        Faire un don
-                    </a>
-                </div>
-            </div>
         </div>
     </header>
 
-    <!-- Hero Section with Carousel -->
-    <section id="home" class="relative overflow-hidden">
-        <div class="hero-slide relative h-96 md:h-screen max-h-screen w-full bg-cover bg-center flex items-center" style="background-image: url('img/hero-bg.jpg')">
-            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-            <div class="container mx-auto px-4 relative z-10 text-white">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4">Éduquer, Inspirer, Transformer</h1>
-                <p class="text-xl md:text-2xl mb-8 max-w-2xl">Soutenez nos projets pour un avenir meilleur dans les communautés de Tounga-Djè</p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#donate" class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-md font-medium text-lg transition duration-300">
-                        Faire un don
-                    </a>
-                    <a href="#projects" class="bg-white hover:bg-gray-100 text-amber-800 px-6 py-3 rounded-md font-medium text-lg transition duration-300">
-                        Nos projets
-                    </a>
+    <main id="contenu">
+        <!-- Accueil -->
+        <section class="hero" id="accueil">
+            <div class="hero-pattern" aria-hidden="true"></div>
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <p class="eyebrow eyebrow-light">Association d'aide à la ruralité · Bafing, Côte d'Ivoire</p>
+                    <h1>Faire grandir nos villages, <em>ensemble.</em></h1>
+                    <p class="lead">L'Alliance Tounga-djè relie la diaspora et les habitants du Bafing pour mener des projets utiles à la vie rurale&nbsp;: agriculture, école, eau et santé.</p>
+                    <div class="hero-actions">
+                        <a href="#don" class="btn btn-primary btn-lg">Faire un don</a>
+                        <a href="#actions" class="btn btn-ghost btn-lg">Découvrir nos actions</a>
+                    </div>
+                </div>
+                <div class="hero-visual" aria-hidden="true">
+                    <div class="hero-disc">
+                        <img src="img/embleme.png" alt="" width="320" height="351">
+                    </div>
+                    <span class="hero-tag tag-1">Agriculture</span>
+                    <span class="hero-tag tag-2">Éducation</span>
+                    <span class="hero-tag tag-3">Eau &amp; santé</span>
+                    <span class="hero-tag tag-4">Diaspora</span>
                 </div>
             </div>
+        </section>
+
+        <!-- Piliers -->
+        <section class="pillars" aria-label="Ce qui nous guide">
+            <div class="container pillars-grid">
+                <article class="pillar reveal">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"/></svg>
+                    <h2>Ancrés au village</h2>
+                    <p>Les projets partent des besoins exprimés par les habitants, pas de bureaux lointains.</p>
+                </article>
+                <article class="pillar reveal">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6M10 18l-6-6 6-6"/></svg>
+                    <h2>Un pont avec la diaspora</h2>
+                    <p>Ceux qui sont partis gardent un lien utile avec ceux qui sont restés.</p>
+                </article>
+                <article class="pillar reveal">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+                    <h2>Des comptes clairs</h2>
+                    <p>Chaque projet est suivi et chaque donateur sait à quoi son argent a servi.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- L'association -->
+        <section class="section" id="association">
+            <div class="container split">
+                <div class="split-media reveal">
+                    <img src="img/semis.webp" alt="Jeunes pousses dans des godets de terre" width="1200" height="800" loading="lazy">
+                    <div class="media-badge">
+                        <img src="img/embleme.png" alt="" width="48" height="53">
+                        <span>De la France<br>au Bafing</span>
+                    </div>
+                </div>
+                <div class="split-text reveal">
+                    <p class="eyebrow">L'association</p>
+                    <h2 class="section-title">Une alliance entre ceux qui sont partis et ceux qui sont restés</h2>
+                    <p>L'Alliance Tounga-djè est une association d'aide à la ruralité. Elle rassemble des membres attachés à la région du Bafing, au nord-ouest de la Côte d'Ivoire, qu'ils vivent au pays ou en France.</p>
+                    <p>Notre conviction est simple&nbsp;: les villages ont des idées, des bras et des terres. Ce qui manque souvent, c'est un coup de pouce pour s'organiser, se former et s'équiper. C'est ce coup de pouce que nous voulons apporter.</p>
+                    <ul class="check-list">
+                        <li>Écouter les besoins des villages</li>
+                        <li>Monter des projets concrets avec les habitants</li>
+                        <li>Mobiliser la diaspora et les partenaires</li>
+                        <li>Rendre compte de chaque action</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nos actions -->
+        <section class="section section-tint" id="actions">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="eyebrow">Nos actions</p>
+                    <h2 class="section-title">Quatre domaines pour améliorer la vie rurale</h2>
+                    <p class="section-intro">Nous concentrons nos efforts là où un petit investissement change durablement le quotidien des familles.</p>
+                </div>
+
+                <div class="filters" role="group" aria-label="Filtrer les actions par domaine">
+                    <button type="button" class="chip is-active" data-filter="tous" aria-pressed="true">Tous</button>
+                    <button type="button" class="chip" data-filter="agriculture" aria-pressed="false">Agriculture</button>
+                    <button type="button" class="chip" data-filter="education" aria-pressed="false">Éducation</button>
+                    <button type="button" class="chip" data-filter="eau-sante" aria-pressed="false">Eau &amp; santé</button>
+                    <button type="button" class="chip" data-filter="diaspora" aria-pressed="false">Culture &amp; diaspora</button>
+                </div>
+
+                <div class="cards" id="actions-liste">
+                    <article class="card reveal" data-domaine="agriculture">
+                        <div class="card-icon icon-green"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21V11M12 11c0-4 3-7 8-7 0 5-3 7-8 7zM12 14c0-3-2.5-5.5-7-5.5 0 4 2.5 5.5 7 5.5z"/></svg></div>
+                        <span class="card-tag">Agriculture</span>
+                        <h3>Appui aux producteurs</h3>
+                        <p>Semences, petit matériel et accès aux marchés, en lien avec la coopérative Alliance Tounga AGROCOOP.</p>
+                    </article>
+                    <article class="card reveal" data-domaine="agriculture">
+                        <div class="card-icon icon-green"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-5 9 5-9 5z"/><path d="M7 11.5V16c0 1.5 2.2 3 5 3s5-1.5 5-3v-4.5"/></svg></div>
+                        <span class="card-tag">Agriculture</span>
+                        <h3>Formation agricole</h3>
+                        <p>Ateliers pratiques sur les techniques de culture, la conservation des récoltes et la gestion d'une exploitation.</p>
+                    </article>
+                    <article class="card reveal" data-domaine="education">
+                        <div class="card-icon icon-orange"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5C4 4.7 4.7 4 5.5 4H11v16H5.5c-.8 0-1.5-.7-1.5-1.5zM20 5.5c0-.8-.7-1.5-1.5-1.5H13v16h5.5c.8 0 1.5-.7 1.5-1.5z"/></svg></div>
+                        <span class="card-tag">Éducation</span>
+                        <h3>Réussite scolaire</h3>
+                        <p>Fournitures, soutien scolaire et accompagnement des élèves, pour que l'école reste une chance pour tous les enfants.</p>
+                    </article>
+                    <article class="card reveal" data-domaine="eau-sante">
+                        <div class="card-icon icon-blue"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></div>
+                        <span class="card-tag">Eau &amp; santé</span>
+                        <h3>Eau potable et hygiène</h3>
+                        <p>Points d'eau, entretien des pompes et sensibilisation à l'hygiène pour limiter les maladies liées à l'eau.</p>
+                    </article>
+                    <article class="card reveal" data-domaine="eau-sante">
+                        <div class="card-icon icon-blue"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/><path d="M9 11h6M12 8v6"/></svg></div>
+                        <span class="card-tag">Eau &amp; santé</span>
+                        <h3>Santé de proximité</h3>
+                        <p>Soutien aux centres de santé ruraux et aux campagnes de prévention organisées avec les autorités locales.</p>
+                    </article>
+                    <article class="card reveal" data-domaine="diaspora">
+                        <div class="card-icon icon-orange"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.5 3.8 9S14.5 18.5 12 21M12 3C9.5 5.5 8.2 8.5 8.2 12s1.3 6.5 3.8 9"/></svg></div>
+                        <span class="card-tag">Culture &amp; diaspora</span>
+                        <h3>Liens et transmission</h3>
+                        <p>Rencontres, parrainages et transmission des savoirs entre la diaspora, les jeunes et les anciens.</p>
+                    </article>
+                </div>
+                <p class="empty-state" hidden>Aucune action dans ce domaine pour le moment.</p>
+            </div>
+        </section>
+
+        <!-- Méthode -->
+        <section class="section" aria-labelledby="methode-titre">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="eyebrow">Notre méthode</p>
+                    <h2 class="section-title" id="methode-titre">Du besoin du village au projet réalisé</h2>
+                </div>
+                <ol class="steps">
+                    <li class="step reveal">
+                        <span class="step-num">1</span>
+                        <h3>Écouter</h3>
+                        <p>Les habitants, les chefs de village et les groupements nous font part de leurs priorités.</p>
+                    </li>
+                    <li class="step reveal">
+                        <span class="step-num">2</span>
+                        <h3>Construire</h3>
+                        <p>Nous montons le projet avec eux&nbsp;: budget, calendrier, rôle de chacun.</p>
+                    </li>
+                    <li class="step reveal">
+                        <span class="step-num">3</span>
+                        <h3>Financer</h3>
+                        <p>Membres, diaspora et partenaires réunissent les moyens nécessaires.</p>
+                    </li>
+                    <li class="step reveal">
+                        <span class="step-num">4</span>
+                        <h3>Rendre compte</h3>
+                        <p>Photos, dépenses et résultats sont partagés avec tous ceux qui ont contribué.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Le Bafing -->
+        <section class="section section-dark" id="bafing">
+            <div class="hero-pattern" aria-hidden="true"></div>
+            <div class="container split split-reverse">
+                <div class="split-text reveal">
+                    <p class="eyebrow eyebrow-light">Notre territoire</p>
+                    <h2 class="section-title">Le Bafing, terre de collines et de cultures</h2>
+                    <p>Au nord-ouest de la Côte d'Ivoire, la région du Bafing a pour chef-lieu Touba. C'est une région rurale où l'agriculture fait vivre la plupart des familles, loin des grands centres urbains.</p>
+                    <p>C'est là, notamment autour d'Ourossanisso, que nous concentrons nos efforts. L'association travaille en bonne entente avec la coopérative <strong>Alliance Tounga AGROCOOP</strong>, qui organise les producteurs de la zone.</p>
+                    <dl class="facts">
+                        <div><dt>Chef-lieu</dt><dd>Touba</dd></div>
+                        <div><dt>Situation</dt><dd>Nord-ouest ivoirien</dd></div>
+                        <div><dt>Cultures</dt><dd>Riz, manioc, maïs, gingembre</dd></div>
+                    </dl>
+                </div>
+                <div class="split-media reveal">
+                    <img src="img/recolte.webp" alt="Étal de légumes frais et de céréales" width="1200" height="800" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- Agir -->
+        <section class="section" id="agir">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="eyebrow">Agir avec nous</p>
+                    <h2 class="section-title">Chacun peut faire avancer un village</h2>
+                    <p class="section-intro">Que vous viviez au pays ou à l'étranger, votre temps, votre réseau ou vos compétences comptent autant qu'un don.</p>
+                </div>
+                <div class="cards cards-3">
+                    <article class="card card-action reveal">
+                        <div class="card-icon icon-green"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6M17 8v6M14 11h6"/></svg></div>
+                        <h3>Devenir membre</h3>
+                        <p>Rejoignez l'association, participez aux décisions et suivez chaque projet de près.</p>
+                        <a href="#contact" class="link-arrow" data-profil="Devenir membre">Je deviens membre</a>
+                    </article>
+                    <article class="card card-action reveal">
+                        <div class="card-icon icon-orange"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 11V6.5a1.5 1.5 0 0 1 3 0V11M10 10V5a1.5 1.5 0 0 1 3 0v5M13 10V6a1.5 1.5 0 0 1 3 0v6.5c0 4.5-2.5 8-6.5 8-2.5 0-4-1.2-5.5-3.5L2.6 13.4a1.5 1.5 0 0 1 2.4-1.8L7 14"/></svg></div>
+                        <h3>Devenir bénévole</h3>
+                        <p>Communication, comptabilité, agronomie, enseignement&nbsp;: mettez vos compétences au service des villages.</p>
+                        <a href="#contact" class="link-arrow" data-profil="Devenir bénévole">Je propose mon aide</a>
+                    </article>
+                    <article class="card card-action reveal">
+                        <div class="card-icon icon-blue"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12l4-4 4 3 3-3 3 3 4-4M3 12l7 7 4-3 2 2 5-5"/></svg></div>
+                        <h3>Devenir partenaire</h3>
+                        <p>Entreprise, collectivité ou fondation&nbsp;: construisons ensemble un projet à fort impact local.</p>
+                        <a href="#contact" class="link-arrow" data-profil="Devenir partenaire">Proposer un partenariat</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Don -->
+        <section class="section section-tint" id="don">
+            <div class="container don-grid">
+                <div class="don-text reveal">
+                    <p class="eyebrow">Faire un don</p>
+                    <h2 class="section-title">Votre don devient un projet visible au village</h2>
+                    <p>Choisissez un montant et annoncez votre don. Nous vous répondons avec les moyens de paiement disponibles (Wave, Orange Money, virement) et nous vous tenons informé de l'utilisation des fonds.</p>
+                    <ul class="check-list">
+                        <li>Montant libre, sans engagement</li>
+                        <li>Nouvelles du projet que vous soutenez</li>
+                        <li>Contact direct avec l'association</li>
+                    </ul>
+                </div>
+
+                <form class="don-card reveal" id="form-don" novalidate>
+                    <fieldset class="currency" aria-label="Devise">
+                        <label><input type="radio" name="devise" value="FCFA" checked><span>FCFA</span></label>
+                        <label><input type="radio" name="devise" value="EUR"><span>Euros</span></label>
+                    </fieldset>
+
+                    <fieldset class="amounts">
+                        <legend>Montant de votre don</legend>
+                        <div class="amounts-grid" id="montants"></div>
+                    </fieldset>
+
+                    <div class="field">
+                        <label for="don-autre">Autre montant</label>
+                        <div class="input-suffix">
+                            <input type="number" id="don-autre" name="autre" min="1" inputmode="numeric" placeholder="Votre montant">
+                            <span id="don-devise">FCFA</span>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="don-nom">Votre nom</label>
+                        <input type="text" id="don-nom" name="nom" autocomplete="name" required>
+                        <p class="field-error" id="don-nom-erreur" hidden>Indiquez votre nom pour que nous puissions vous remercier.</p>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block btn-lg">Annoncer mon don de <span id="don-resume">10 000 FCFA</span></button>
+                    <p class="form-note" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+
+        <!-- Questions -->
+        <section class="section" aria-labelledby="faq-titre">
+            <div class="container container-narrow">
+                <div class="section-head reveal">
+                    <p class="eyebrow">Questions fréquentes</p>
+                    <h2 class="section-title" id="faq-titre">Vous vous demandez peut-être…</h2>
+                </div>
+                <div class="faq">
+                    <details class="reveal">
+                        <summary>À quoi sert mon don&nbsp;?</summary>
+                        <p>Il finance les projets décidés avec les villages&nbsp;: matériel agricole, fournitures scolaires, points d'eau, actions de santé. Vous pouvez indiquer le domaine que vous souhaitez soutenir.</p>
+                    </details>
+                    <details class="reveal">
+                        <summary>Comment saurai-je ce qui a été fait&nbsp;?</summary>
+                        <p>Nous partageons avec les donateurs des nouvelles des projets&nbsp;: photos, dépenses réalisées et résultats obtenus.</p>
+                    </details>
+                    <details class="reveal">
+                        <summary>Je vis à l'étranger, puis-je aider&nbsp;?</summary>
+                        <p>Oui. Une grande partie de nos membres vit hors de Côte d'Ivoire. Vous pouvez donner, adhérer ou mettre vos compétences à disposition à distance.</p>
+                    </details>
+                    <details class="reveal">
+                        <summary>Mon village a un projet, comment vous le présenter&nbsp;?</summary>
+                        <p>Écrivez-nous avec le formulaire de contact en choisissant «&nbsp;Proposer un projet&nbsp;». Décrivez le besoin, le village concerné et les personnes à contacter&nbsp;: nous revenons vers vous.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section section-tint" id="contact">
+            <div class="container contact-grid">
+                <div class="contact-text reveal">
+                    <p class="eyebrow">Contact</p>
+                    <h2 class="section-title">Parlons de votre projet</h2>
+                    <p>Une question, une envie d'adhérer, un projet pour votre village&nbsp;? Laissez-nous un message, nous vous répondons rapidement.</p>
+                    <ul class="contact-list" id="coordonnees"></ul>
+                </div>
+
+                <form class="contact-card reveal" id="form-contact" novalidate>
+                    <div class="field">
+                        <label for="c-nom">Nom et prénom</label>
+                        <input type="text" id="c-nom" name="nom" autocomplete="name" required>
+                        <p class="field-error" hidden>Indiquez votre nom.</p>
+                    </div>
+                    <div class="field">
+                        <label for="c-joindre">Téléphone ou e-mail</label>
+                        <input type="text" id="c-joindre" name="joindre" autocomplete="email" required>
+                        <p class="field-error" hidden>Indiquez un numéro ou une adresse e-mail pour que nous puissions vous répondre.</p>
+                    </div>
+                    <div class="field">
+                        <label for="c-objet">Objet</label>
+                        <select id="c-objet" name="objet">
+                            <option>Question générale</option>
+                            <option>Devenir membre</option>
+                            <option>Devenir bénévole</option>
+                            <option>Devenir partenaire</option>
+                            <option>Proposer un projet</option>
+                            <option>Faire un don</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="c-message">Votre message</label>
+                        <textarea id="c-message" name="message" rows="5" required></textarea>
+                        <p class="field-error" hidden>Écrivez quelques mots pour nous expliquer votre demande.</p>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block btn-lg">Envoyer mon message</button>
+                    <p class="form-note" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <img src="img/logo-atd-blanc.png" alt="Alliance Tounga-djè" width="180" height="129" loading="lazy">
+                <p class="footer-tagline">Association d'aide à la ruralité dans la région du Bafing, Côte d'Ivoire.</p>
+            </div>
+            <nav aria-label="Liens du pied de page">
+                <ul class="footer-links">
+                    <li><a href="#association">L'association</a></li>
+                    <li><a href="#actions">Nos actions</a></li>
+                    <li><a href="#bafing">Le Bafing</a></li>
+                    <li><a href="#agir">Agir avec nous</a></li>
+                    <li><a href="#don">Faire un don</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-
-        <!-- Carousel Indicators -->
-        <div class="absolute bottom-8 left-0 right-0 flex justify-center space-x-2 z-10">
-            <button class="w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 focus:outline-none"></button>
-            <button class="w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 focus:outline-none"></button>
-            <button class="w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 focus:outline-none"></button>
+        <div class="container footer-bottom">
+            <p>© <span id="annee">2026</span> Alliance Tounga-djè</p>
+            <a href="#accueil" class="to-top">Revenir en haut</a>
         </div>
-    </section>
+    </footer>
 
-    <!-- Our Mission Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">Notre Mission</h2>
-                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
-            </div>
-            <div class="max-w-4xl mx-auto text-center text-gray-700 text-lg">
-                <p>L'Alliance Tounga-Djè œuvre pour le développement durable des communautés à travers l'éducation, la promotion culturelle et l'autonomisation économique. Notre mission est de créer des opportunités équitables pour tous, en particulier les enfants et les jeunes, par des programmes éducatifs innovants, la préservation du patrimoine culturel et des initiatives de développement communautaire. Nous croyons en un avenir où chaque individu a les moyens de réaliser son plein potentiel tout en restant ancré dans ses valeurs culturelles.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Recent News Section -->
-    <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">Actualités Récentes</h2>
-                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- News Item 1 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
-                    <div class="h-48 bg-cover bg-center" style="background-image: url('img/news-ecole.jpg')"></div>
-                    <div class="p-6">
-                        <span class="text-sm text-amber-600">15 Juin 2023</span>
-                        <h3 class="text-xl font-bold text-gray-800 mt-2 mb-3">Inauguration de la nouvelle école</h3>
-                        <p class="text-gray-600 mb-4">Nous avons inauguré notre nouvelle école primaire dans le village de Tounga, capable d'accueillir 200 élèves avec des installations modernes.</p>
-                        <a href="#" class="text-amber-600 font-medium hover:text-amber-700 flex items-center">
-                            Lire plus <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- News Item 2 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
-                    <div class="h-48 bg-cover bg-center" style="background-image: url('img/news-festival.jpg')"></div>
-                    <div class="p-6">
-                        <span class="text-sm text-amber-600">2 Juin 2023</span>
-                        <h3 class="text-xl font-bold text-gray-800 mt-2 mb-3">Festival Culturel Annuel</h3>
-                        <p class="text-gray-600 mb-4">Notre festival culturel annuel a rassemblé plus de 5000 personnes pour célébrer les traditions locales avec des danses, musiques et arts traditionnels.</p>
-                        <a href="#" class="text-amber-600 font-medium hover:text-amber-700 flex items-center">
-                            Lire plus <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- News Item 3 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
-                    <div class="h-48 bg-cover bg-center" style="background-image: url('img/news-agriculture.jpg')"></div>
-                    <div class="p-6">
-                        <span class="text-sm text-amber-600">20 Mai 2023</span>
-                        <h3 class="text-xl font-bold text-gray-800 mt-2 mb-3">Programme de Formation Agricole</h3>
-                        <p class="text-gray-600 mb-4">Lancement d'un nouveau programme de formation en techniques agricoles modernes pour 50 agriculteurs locaux afin d'améliorer leurs rendements.</p>
-                        <a href="#" class="text-amber-600 font-medium hover:text-amber-700 flex items-center">
-                            Lire plus <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-10">
-                <a href="#" class="inline-block bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-md font-medium transition duration-300">
-                    Voir toutes les actualités
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Join Us Section -->
-    <section class="py-16 bg-amber-800 text-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Rejoignez notre cause</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">Ensemble, nous pouvons faire la différence dans la vie de milliers de personnes.</p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#volunteer" class="bg-white hover:bg-gray-100 text-amber-800 px-6 py-3 rounded-md font-medium text-lg transition duration-300">
-                    Devenir bénévole
-                </a>
-                <a href="#donate" class="bg-transparent hover:bg-amber-700 border-2 border-white text-white px-6 py-3 rounded-md font-medium text-lg transition duration-300">
-                    Faire un don
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">À propos de nous</h2>
-                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
-            </div>
-            
-            <div class="flex flex-col lg:flex-row items-center mb-16">
-                <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-8">
-                    <h3 class="text-2xl font-bold text-amber-800 mb-4">Notre Histoire</h3>
-                    <p class="text-gray-700 mb-4">Fondée en 2010 par un groupe de leaders communautaires préoccupés par le déclin des infrastructures éducatives et la perte des traditions culturelles, l'Alliance Tounga-Djè a commencé comme une petite initiative locale. Aujourd'hui, nous sommes une organisation reconnue qui impacte positivement des milliers de vies chaque année.</p>
-                    <p class="text-gray-700">Notre nom "Tounga-Djè" vient des deux villages voisins où nous avons commencé nos activités, symbolisant notre engagement à unir les communautés pour un développement harmonieux.</p>
-                </div>
-                <div class="lg:w-1/2">
-                    <div class="bg-gray-200 h-80 rounded-lg overflow-hidden">
-                        <!-- Placeholder for about image -->
-                        <div class="w-full h-full bg-cover bg-center" style="background-image: url('img/about-history.jpg')"></div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Our Values -->
-            <div class="mb-16">
-                <h3 class="text-2xl font-bold text-amber-800 mb-8 text-center">Nos Valeurs</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Value 1 -->
-                    <div class="value-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:border-amber-200 transition duration-300">
-                        <div class="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 mb-4">
-                            <i class="fas fa-book-open text-2xl"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-gray-800 mb-2">Éducation</h4>
-                        <p class="text-gray-600">Nous croyons que l'éducation est le fondement du développement personnel et communautaire.</p>
-                    </div>
-                    
-                    <!-- Value 2 -->
-                    <div class="value-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:border-amber-200 transition duration-300">
-                        <div class="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 mb-4">
-                            <i class="fas fa-hands-helping text-2xl"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-gray-800 mb-2">Solidarité</h4>
-                        <p class="text-gray-600">Nous travaillons ensemble pour le bien commun, en soutenant les plus vulnérables.</p>
-                    </div>
-                    
-                    <!-- Value 3 -->
-                    <div class="value-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:border-amber-200 transition duration-300">
-                        <div class="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 mb-4">
-                            <i class="fas fa-music text-2xl"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-gray-800 mb-2">Culture</h4>
-                        <p class="text-gray-600">Nous préservons et célébrons notre riche patrimoine culturel pour les générations futures.</p>
-                    </div>
-                    
-                    <!-- Value 4 -->
-                    <div class="value-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:border-amber-200 transition duration-300">
-                        <div class="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 mb-4">
-                            <i class="fas fa-leaf text-2xl"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-gray-800 mb-2">Durabilité</h4>
-                        <p class="text-gray-600">Nos solutions sont conçues pour avoir un impact durable sur les communautés.</p>
-                    </div>
-                    
-                    <!-- Value 5 -->
-                    <div class="value-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:border-amber-200 transition duration-300">
-                        <div class="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 mb-4">
-                            <i class="fas fa-balance-scale text-2xl"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-gray-800 mb-2">Équité</h4>
-                        <p class="text-gray-600">Nous nous engageons à créer des opportunités équitables pour tous, sans discrimination.</p>
-                    </div>
-                    
-                    <!-- Value 6 -->
-                    <div class="value-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:border-amber-200 transition duration-300">
-                        <div class="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 mb-4">
-                            <i class="fas fa-hand-holding-heart text-2xl"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-gray-800 mb-2">Empathie</h4>
-                        <p class="text-gray-600">Nous écoutons et répondons aux besoins réels des communautés avec compassion.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Our Impact -->
-            <div class="bg-amber-50 rounded-lg p-8">
-                <h3 class="text-2xl font-bold text-amber-800 mb-6 text-center">Notre Impact</h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                    <div>
-                        <div class="text-5xl font-bold text-amber-600 mb-2">500+</div>
-                        <div class="text-gray-700 font-medium">Enfants scolarisés</div>
-                    </div>
-                    <div>
-                        <div class="text-5xl font-bold text-amber-600 mb-2">15</div>
-                        <div class="text-gray-700 font-medium">Projets réalisés</div>
-                    </div>
-                    <div>
-                        <div class="text-5xl font-bold text-amber-600 mb-2">10,000+</div>
-                        <div class="text-gray-700 font-medium">Personnes impactées</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">Nos Projets</h2>
-                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
-            </div>
-            
-            <!-- Project Filters -->
-            <div class="flex justify-center mb-8">
-                <div class="inline-flex rounded-md shadow-sm" role="group">
-                    <button type="button" class="px-4 py-2 text-sm font-medium rounded-l-lg border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-amber-500 focus:text-amber-700">
-                        Tous
-                    </button>
-                    <button type="button" class="px-4 py-2 text-sm font-medium border-t border-b border-gray-200 bg-white text-gray-700 hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-amber-500 focus:text-amber-700">
-                        Éducation
-                    </button>
-                    <button type="button" class="px-4 py-2 text-sm font-medium border-t border-b border-gray-200 bg-white text-gray-700 hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-amber-500 focus:text-amber-700">
-                        Culture
-                    </button>
-                    <button type="button" class="px-4 py-2 text-sm font-medium rounded-r-md border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-amber-500 focus:text-amber-700">
-                        Développement
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Projects Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <div class="h-48 bg-cover bg-center" style="background-image: url('img/project-education.jpg')"></div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-amber-800 bg-amber-100 rounded-full mb-2">Éducation</span>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">École Primaire Moderne</h3>
-                        <p class="text-gray-600 mb-4">Construction et équipement d'une école primaire moderne avec 6 salles de classe, une bibliothèque et un terrain de sport.</p>
-                        <a href="#" class="inline-flex items-center text-amber-600 font-medium hover:text-amber-700">
-                            En savoir plus <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Project 2 -->
-                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <div class="h-48 bg-cover bg-center" style="background-image: url('img/project-culture.jpg')"></div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full mb-2">Culture</span>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Centre Culturel</h3>
-                        <p class="text-gray-600 mb-4">Création d'un centre culturel pour préserver et promouvoir les arts traditionnels, avec des ateliers et des spectacles réguliers.</p>
-                        <a href="#" class="inline-flex items-center text-amber-600 font-medium hover:text-amber-700">
-                            En savoir plus <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Project 3 -->
-                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <div class="h-48 bg-cover bg-center" style="background-image: url('img/project-development.jpg')"></div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-blue-800 bg-blue-100 rounded-full mb-2">Développement</span>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Puits Communautaires</h3>
-                        <p class="text-gray-600 mb-4">Forage et installation de 5 puits d'eau potable dans les villages les plus reculés de la région.</p>
-                        <a href="#" class="inline-flex items-center text-amber-600 font-medium hover:text-amber-700">
-                            En savoir plus <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Project 4 -->
-                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <div class="h-48 bg-cover bg-center" style="background-image: url('img/project-bourses.jpg')"></div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-amber-800 bg-amber-100 rounded-full mb-2">Éducation</span>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Bourses d'Études</h3>
-                        <p class="text-gray-600 mb-4">Programme de bourses pour 50 élèves méritants issus de familles défavorisées pour poursuivre leurs études secondaires.</p>
-                        <a href="#" class="inline-flex items-center text-amber-600 font-medium hover:text-amber-700">
-                            En savoir plus <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Project 5 -->
-                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <div class="h-48 bg-cover bg-center" style="background-image: url('img/project-festival.jpg')"></div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full mb-2">Culture</span>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Festival Annuel</h3>
-                        <p class="text-gray-600 mb-4">Organisation du festival culturel annuel mettant en valeur les danses, musiques et arts traditionnels de la région.</p>
-                        <a href="#" class="inline-flex items-center text-amber-600 font-medium hover:text-amber-700">
-                            En savoir plus <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Project 6 -->
-                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <div class="h-48 bg-cover bg-center" style="background-image: url('img/project-development.jpg')"></div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-blue-800 bg-blue-100 rounded-full mb-2">Développement</span>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Formation Agricole</h3>
-                        <p class="text-gray-600 mb-4">Programme de formation en techniques agricoles modernes pour améliorer les rendements des petits agriculteurs.</p>
-                        <a href="#" class="inline-flex items-center text-amber-600 font-medium hover:text-amber-700">
-                            En savoir plus <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-10">
-                <a href="#" class="inline-block bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-md font-medium transition duration-300">
-                    Voir tous nos projets
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Media Gallery Section -->
-    <section id="media" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">Multimédia</h2>
-                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
-            </div>
-            
-            <!-- Media Filters -->
-            <div class="flex justify-center mb-8">
-                <div class="inline-flex rounded-md shadow-sm" role="group">
-                    <button type="button" class="px-4 py-2 text-sm font-medium rounded-l-lg border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-amber-500 focus:text-amber-700">
-                        Tous
-                    </button>
-                    <button type="button" class="px-4 py-2 text-sm font-medium border-t border-b border-gray-200 bg-white text-gray-700 hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-amber-500 focus:text-amber-700">
-                        Photos
-                    </button>
-                    <button type="button" class="px-4 py-2 text-sm font-medium rounded-r-md border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-amber-500 focus:text-amber-700">
-                        Vidéos
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Gallery Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                <!-- Image 1 -->
-                <div class="gallery-item bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="h-48 bg-cover bg-center" style="background-image: url('img/news-ecole.jpg')"></div>
-                    <div class="p-4">
-                        <div class="flex justify-between items-center">
-                            <span class="text-xs text-gray-500">15 Juin 2023</span>
-                            <span class="text-xs px-2 py-1 bg-amber-100 text-amber-800 rounded-full">Éducation</span>
-                        </div>
-                        <h4 class="text-sm font-medium text-gray-800 mt-2">Inauguration de l'école primaire</h4>
-                    </div>
-                </div>
-                
-                <!-- Video 1 -->
-                <div class="gallery-item bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="h-48 bg-gray-800 flex items-center justify-center relative">
-                        <div class="absolute inset-0 bg-cover bg-center opacity-50" style="background-image: url('img/news-festival.jpg')"></div>
-                        <div class="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center text-white z-10">
-                            <i class="fas fa-play"></i>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <div class="flex justify-between items-center">
-                            <span class="text-xs text-gray-500">2 Juin 2023</span>
-                            <span class="text-xs px-2 py-1 bg-green-100 text-green-800 rounded-full">Culture</span>
-                        </div>
-                        <h4 class="text-sm font-medium text-gray-800 mt-2">Festival culturel 2023</h4>
-                    </div>
-                </div>
-                
-                <!-- Image 2 -->
-                <div class="gallery-item bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="h-48 bg-cover bg-center" style="background-image: url('img/project-education.jpg')"></div>
-                    <div class="p-4">
-                        <div class="flex justify-between items-center">
-                            <span class="text-xs text-gray-500">20 Mai 2023</span>
-                            <span class="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded-full">Développement</span>
-                        </div>
-                        <h4 class="text-sm font-medium text-gray-800 mt-2">Formation agricole</h4>
-                    </div>
-                </div>
-                
-                <!-- Image 3 -->
-                <div class="gallery-item bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="h-48 bg-cover bg-center" style="background-image: url('img/project-bourses.jpg')"></div>
-                    <div class="p-4">
-                        <div class="flex justify-between items-center">
-                            <span class="text-xs text-gray-500">15 Avril 2023</span>
-                            <span class="text-xs px-2 py-1 bg-amber-100 text-amber-800 rounded-full">Éducation</span>
-                        </div>
-                        <h4 class="text-sm font-medium text-gray-800 mt-2">Distribution de fournitures scolaires</h4>
-                    </div>
-                </div>
-                
-                <!-- Video 2 -->
-                <div class="gallery-item bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="h-48 bg-gray-800 flex items-center justify-center relative">
-                        <div class="absolute inset-0 bg-cover bg-center opacity-50" style="background-image: url('img/project-culture.jpg')"></div>
-                        <div class="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center text-white z-10">
-                            <i class="fas fa-play"></i>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <div class="flex justify-between items-center">
-                            <span class="text-xs text-gray-500">10 Mars 2023</span>
-                            <span class="text-xs px-2 py-1 bg-green-100 text-green-800 rounded-full">Culture</span>
-                        </div>
-                        <h4 class="text-sm font-medium text-gray-800 mt-2">Spectacle de danse traditionnelle</h4>
-                    </div>
-                </div>
-                
-                <!-- Image 4 -->
-                <div class="gallery-item bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="h-48 bg-cover bg-center" style="background-image: url('img/project-festival.jpg')"></div>
-                    <div class="p-4">
-                        <div class="flex justify-between items-center">
-                            <span class="text-xs text-gray-500">5 Mars 2023</span>
-                            <span class="text-xs px-2 py-1 bg-green-100 text-green-800 rounded-full">Culture</span>
-                        </div>
-                        <h4 class="text-sm font-medium text-gray-800 mt-2">Atelier d'artisanat</h4>
-                    </div>
-                </div>
-                
-                <!-- Image 5 -->
-                <div class="gallery-item bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="h-48 bg-cover bg-center" style="background-image: url('img/about-history.jpg')"></div>
-                    <div class="p-4">
-                        <div class="flex justify-between items-center">
-                            <span class="text-xs text-gray-500">28 Février 2023</span>
-                            <span class="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded-full">Développement</span>
-                        </div>
-                        <h4 class="text-sm font-medium text-gray-800 mt-2">Construction de puits</h4>
-                    </div>
-                </div>
-                
-                <!-- Video 3 -->
-                <div class="gallery-item bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="h-48 bg-gray-800 flex items-center justify-center relative">
-                        <div class="absolute inset-0 bg-cover bg-center opacity-50" style="background-image: url('img/news-agriculture.jpg')"></div>
-                        <div class="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center text-white z-10">
-                            <i class="fas fa-play"></i>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <div class="flex justify-between items-center">
-                            <span class="text-xs text-gray-500">15 Février 2023</span>
-                            <span class="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded-full">Développement</span>
-                        </div>
-                        <h4 class="text-sm font-medium text-gray-800 mt-2">Projet agricole communautaire</h4>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-10">
-                <button class="inline-block bg-white hover:bg-gray-100 border border-amber-600 text-amber-600 px-6 py-3 rounded-md font-medium transition duration-300">
-                    Charger plus
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sponsor Section -->
-    <section id="sponsor" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">Notre Parrain d'Honneur</h2>
-                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
-            </div>
-            
-            <div class="bg-white rounded-lg overflow-hidden shadow-lg max-w-4xl mx-auto">
-                <div class="h-64 bg-cover bg-center" style="background-image: url('img/sponsor.jpg')"></div>
-                <div class="p-8">
-                    <h3 class="text-2xl font-bold text-amber-800 mb-4">Dr. Amadou Diallo</h3>
-                    <blockquote class="border-l-4 border-amber-500 pl-4 mb-6 italic text-gray-700">
-                        "Investir dans l'éducation et la culture des jeunes générations, c'est construire les fondations d'une société plus juste et plus prospère."
-                    </blockquote>
-                    <div class="text-gray-700 space-y-4">
-                        <p>Dr. Amadou Diallo, éminent universitaire et philanthrope, est notre parrain d'honneur depuis la création de l'Alliance Tounga-Djè en 2010. Né dans la région, il a gravi les échelons académiques pour devenir professeur d'économie à l'Université de Paris avant de retourner dans son pays natal pour contribuer à son développement.</p>
-                        <p>Son engagement en faveur de l'éducation et du développement communautaire a permis à notre organisation de bénéficier de son réseau et de son expertise. Grâce à son soutien, nous avons pu lancer plusieurs projets majeurs, dont la construction de l'école primaire moderne et la création du centre culturel.</p>
-                        <p>En plus de son rôle de parrain, Dr. Diallo participe activement à nos programmes de mentorat pour les jeunes étudiants et intervient régulièrement lors de nos événements majeurs. Son leadership visionnaire et son dévouement continuent d'inspirer toute notre équipe et les communautés que nous servons.</p>
-                    </div>
-                    <div class="mt-8">
-                        <a href="#contact" class="inline-block bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-md font-medium transition duration-300">
-                            Contactez-nous
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team Section -->
-    <section id="team" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">Notre Équipe Dirigeante</h2>
-                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
-            </div>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                <!-- Team Member 1 -->
-                <div class="team-member bg-white rounded-lg overflow-hidden shadow-md text-center">
-                    <div class="h-64 w-64 mx-auto mt-6 rounded-full overflow-hidden border-4 border-amber-100">
-                        <img src="img/team-president.jpg" alt="Président" class="w-full h-full object-cover transition duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-1">Mamadou Keita</h3>
-                        <p class="text-amber-600 font-medium mb-3">Président</p>
-                        <p class="text-gray-600 text-sm">Fondateur de l'Alliance Tounga-Djè avec 15 ans d'expérience dans le développement communautaire.</p>
-                    </div>
-                </div>
-                
-                <!-- Team Member 2 -->
-                <div class="team-member bg-white rounded-lg overflow-hidden shadow-md text-center">
-                    <div class="h-64 w-64 mx-auto mt-6 rounded-full overflow-hidden border-4 border-amber-100">
-                        <img src="img/team-vicepresident.jpg" alt="Vice-Présidente" class="w-full h-full object-cover transition duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-1">Aminata Bamba</h3>
-                        <p class="text-amber-600 font-medium mb-3">Vice-Présidente</p>
-                        <p class="text-gray-600 text-sm">Spécialiste en éducation avec un focus sur l'accès à l'éducation pour les filles en milieu rural.</p>
-                    </div>
-                </div>
-                
-                <!-- Team Member 3 -->
-                <div class="team-member bg-white rounded-lg overflow-hidden shadow-md text-center">
-                    <div class="h-64 w-64 mx-auto mt-6 rounded-full overflow-hidden border-4 border-amber-100">
-                        <img src="img/sponsor.jpg" alt="Trésorier" class="w-full h-full object-cover transition duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-1">Sékou Traoré</h3>
-                        <p class="text-amber-600 font-medium mb-3">Trésorier</p>
-                        <p class="text-gray-600 text-sm">Expert-comptable avec une passion pour la transparence financière dans les ONG.</p>
-                    </div>
-                </div>
-                
-                <!-- Team Member 4 -->
-                <div class="team-member bg-white rounded-lg overflow-hidden shadow-md text-center">
-                    <div class="h-64 w-64 mx-auto mt-6 rounded-full overflow-hidden border-4 border-amber-100">
-                        <img src="img/team-secretaire.jpg" alt="Secrétaire Générale" class="w-full h-full object-cover transition duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-1">Fatoumata Diarra</h3>
-                        <p class="text-amber-600 font-medium mb-3">Secrétaire Générale</p>
-                        <p class="text-gray-600 text-sm">Organisatrice communautaire avec une expertise en mobilisation des ressources locales.</p>
-                    </div>
-                </div>
-                
-                <!-- Team Member 5 -->
-                <div class="team-member bg-white rounded-lg overflow-hidden shadow-md text-center">
-                    <div class="h-64 w-64 mx-auto mt-6 rounded-full overflow-hidden border-4 border-amber-100">
-                        <img src="img/team-directeur.jpg" alt="Directeur des Projets" class="w-full h-full object-cover transition duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-1">Boubacar Coulibaly</h3>
-                        <p class="text-amber-600 font-medium mb-3">Directeur des Projets</p>
-                        <p class="text-gray-600 text-sm">Ingénieur civil spécialisé dans les infrastructures éducatives et sanitaires.</p>
-                    </div>
-                </div>
-                
-                <!-- Team Member 6 -->
-                <div class="team-member bg-white rounded-lg overflow-hidden shadow-md text-center">
-                    <div class="h-64 w-64 mx-auto mt-6 rounded-full overflow-hidden border-4 border-amber-100">
-                        <img src="img/team-culture.jpg" alt="Responsable Culture" class="w-full h-full object-cover transition duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-1">Aïssata Koné</h3>
-                        <p class="text-amber-600 font-medium mb-3">Responsable Culture</p>
-                        <p class="text-gray-600 text-sm">Artiste et conservatrice culturelle dédiée à la préservation des traditions locales.</p>
-                    </div>
-                </div>
-                
-                <!-- Team Member 7 -->
-                <div class="team-member bg-white rounded-lg overflow-hidden shadow-md text-center">
-                    <div class="h-64 w-64 mx-auto mt-6 rounded-full overflow-hidden border-4 border-amber-100">
-                        <img src="img/team-communication.jpg" alt="Responsable Communication" class="w-full h-full object-cover transition duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-1">Kadiatou Sangaré</h3>
-                        <p class="text-amber-600 font-medium mb-3">Responsable Communication</p>
-                        <p class="text-gray-600 text-sm">Journaliste et spécialiste des médias communautaires avec une expertise en storytelling.</p>
-                    </div>
-                </div>
-                
-                <!-- Team Member 8 -->
-                <div class="team-member bg-white rounded-lg overflow-hidden shadow-md text-center">
-                    <div class="h-64 w-64 mx-auto mt-6 rounded-full overflow-hidden border-4 border-amber-100">
-                        <img src="img/team-benevolat.jpg" alt="Responsable Bénévolat" class="w-full h-full object-cover transition duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-1">Moussa Diakité</h3>
-                        <p class="text-amber-600 font-medium mb-3">Responsable Bénévolat</p>
-                        <p class="text-gray-600 text-sm">Coordinateur expérimenté dans la gestion des programmes de bénévolat et de mentorat.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-12">
-                <a href="#volunteer" class="inline-block bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-md font-medium transition duration-300">
-                    Rejoignez notre équipe
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Radio Section -->
-    <section id="radio" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">Écoutez Tounga-Djè FM</h2>
-                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
-            </div>
-            
-            <div class="max-w-3xl mx-auto">
-                <!-- Radio Player -->
-                <div class="radio-player rounded-xl overflow-hidden shadow-lg mb-12">
-                    <div class="p-8 text-white">
-                        <h3 class="text-2xl font-bold mb-4">En direct maintenant</h3>
-                        <div class="flex items-center mb-6">
-                            <button class="w-16 h-16 bg-white text-amber-600 rounded-full flex items-center justify-center mr-4">
-                                <i class="fas fa-play text-2xl"></i>
-                            </button>
-                            <div>
-                                <p class="text-lg font-medium">Émission spéciale</p>
-                                <p class="text-amber-200">"L'éducation pour tous" avec Dr. Diallo</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <span class="text-sm">14:00 - 15:30</span>
-                            <span class="text-sm">Écouteurs: 245</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- About Radio -->
-                <div class="bg-white rounded-lg p-8 shadow-md mb-12">
-                    <h3 class="text-2xl font-bold text-amber-800 mb-4">À propos de la radio</h3>
-                    <p class="text-gray-700 mb-4">Tounga-Djè FM est la voix des communautés que nous servons. Lancée en 2015, notre station radio communautaire diffuse 24h/24 avec une programmation variée incluant des éducatives, des débats, de la musique traditionnelle et des informations locales.</p>
-                    <p class="text-gray-700">Notre mission est d'informer, éduquer et divertir tout en préservant notre patrimoine culturel. Avec une portée de 50km autour de Tounga-Djè, nous touchons quotidiennement des milliers d'auditeurs, y compris dans les zones les plus reculées.</p>
-                </div>
-                
-                <!-- Program Schedule -->
-                <div class="bg-white rounded-lg p-8 shadow-md">
-                    <h3 class="text-2xl font-bold text-amber-800 mb-6">Programme Hebdomadaire</h3>
-                    <div class="overflow-x-auto">
-                        <table class="min-w-full bg-white">
-                            <thead>
-                                <tr class="bg-amber-50">
-                                    <th class="py-3 px-4 text-left text-amber-800 font-medium">Jour</th>
-                                    <th class="py-3 px-4 text-left text-amber-800 font-medium">Heure</th>
-                                    <th class="py-3 px-4 text-left text-amber-800 font-medium">Émission</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-gray-200">
-                                <tr>
-                                    <td class="py-3 px-4">Lundi</td>
-                                    <td class="py-3 px-4">7:00 - 8:00</td>
-                                    <td class="py-3 px-4">Actualités locales</td>
-                                </tr>
-                                <tr class="bg-gray-50">
-                                    <td class="py-3 px-4">Mardi</td>
-                                    <td class="py-3 px-4">10:00 - 11:30</td>
-                                    <td class="py-3 px-4">Santé communautaire</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-3 px-4">Mercredi</td>
-                                    <td class="py-3 px-4">14:00 - 15:30</td>
-                                    <td class="py-3 px-4">Éducation pour tous</td>
-                                </tr>
-                                <tr class="bg-gray-50">
-                                    <td class="py-3 px-4">Jeudi</td>
-                                    <td class="py-3 px-4">16:00 - 17:30</td>
-                                    <td class="py-3 px-4">Agriculture moderne</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-3 px-4">Vendredi</td>
-                                    <td class="py-3 px-4">18:00 - 20:00</td>
-                                    <td class="py-3 px-4">Musique traditionnelle</td>
-                                </tr>
-                                <tr class="bg-gray-50">
-                                    <td class="py-3 px-4">Samedi</td>
-                                    <td class="py-3 px-4">9:00 - 12:00</td>
-                                    <td class="py-3 px-4">Jeunesse et avenir</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-3 px-4">Dimanche</td>
-                                    <td class="py-3 px-4">7:00 - 10:00</td>
-                                    <td class="py-3 px-4">Culture et traditions</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                
-
+    <script src="js/main.js?v=4"></script>
+</body>
 </html>
-
-
